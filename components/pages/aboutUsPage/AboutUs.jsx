@@ -28,7 +28,7 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <div className="bg-deepYellow px-6 py-10 mb-10">
+            <div className="bg-deepYellow px-6 py-10 mb-10 z-10">
               <p className="text-3xl font-serif leading-10">I am happy to know you that 50+ projects done sucessfully!</p>
               <button className="py-1 px-3 border border-black mt-4">HIRE ME</button>
             </div>

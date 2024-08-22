@@ -3,7 +3,7 @@ import React from "react";
 function ExpertiseCard({ divStyle, iconStyle, icon: Icon, headings, para }) {
   return (
     <div className={` px-6 py-8  border-b-2 ${divStyle} relative rounded-t-xl shadow-2xl my-20`}>
-      <div className={`absolute -top-8 left-[40%] z-50`}>
+      <div className={`absolute -top-8 left-[40%] z-20`}>
         <Icon className={`text-7xl ${iconStyle}`} />
       </div>
       <div className="text-center">

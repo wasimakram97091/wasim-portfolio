@@ -2,18 +2,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import dp from "../../../public/images/dp.png";
-import { GiCrossMark } from "react-icons/gi";
 
-function AsideComponent({ AsideHandler }) {
+function AsideComponent() {
   const [activeItem, setActiveItem] = useState("HOME");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
     console.log(`${item} is active`);
-  };
-
-  const HideAsideHandler = () => {
-    AsideHandler();
   };
 
   const menuItems = ["HOME", "ABOUT", "SERVICES", "SKILLS", "EDUCATION", "EXPERIENCE", "WORK", "BLOG", "CONTACT"];
@@ -22,7 +17,6 @@ function AsideComponent({ AsideHandler }) {
     <div className="flex justify-center items-center flex-col bg-gray-200 p-12 ">
       <div className="flex justify-between items-start">
         <Image src={dp} height={200} width={200} alt="Wasim Akram" />
-        <GiCrossMark className="text-3xl" onClick={HideAsideHandler} />
       </div>
 
       <h2 className="my-4 text-2xl font-bold font-serif">Wasim Akram</h2>

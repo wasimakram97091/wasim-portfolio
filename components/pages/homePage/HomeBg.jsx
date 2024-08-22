@@ -7,6 +7,7 @@ import { FaDownload } from "react-icons/fa6";
 import { MdContactPhone } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../app/variants";
+import { GiCrossMark } from "react-icons/gi";
 
 function HomeBg() {
   const [showAside, setShowAside] = useState(false);
@@ -68,16 +69,15 @@ function HomeBg() {
               </div>
             )}
           </motion.div>
-          <div className="fixed z-50 bg-gray-100 top-6 left-4">
-            <BiMenuAltLeft className="text-5xl" onClick={AsideHandler} />
+          <div className="fixed z-50 bg-gray-100 top-6 left-4 p-1 rounded-md">
+            {!showAside ? <BiMenuAltLeft className="text-5xl" onClick={AsideHandler} /> : <GiCrossMark className="text-4xl" onClick={AsideHandler} />}
           </div>
 
+          {/* Updated AsideComponent positioning and z-index */}
           <div
-            className={`absolute top-0 left-0 h-screen overflow-y-scroll transition-transform duration-500 ${
-              showAside ? "transform translate-x-0" : "transform -translate-x-full"
-            }`}
+            className={`fixed top-0 left-0 h-screen w-full overflow-y-scroll z-40 transition-transform duration-500 transform ${showAside ? "translate-x-0" : "-translate-x-full"}`}
           >
-            <AsideComponent AsideHandler={AsideHandler} />
+            <AsideComponent />
           </div>
         </div>
       </SectionWrapper>
