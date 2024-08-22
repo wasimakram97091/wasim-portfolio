@@ -20,11 +20,11 @@ function Experiences() {
     <SectionWrapper>
       <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className="px-4 my-10">
         <PageHeading upperHeading={"EXPERIENCE"} dawnHeading={"WORK EXPERIENCE"} />
-        <div className="flex justify-center items-start gap-6">
+        <div className="flex justify-center items-start gap-4">
           <div className="bg-blue-600 rounded-full p-3">
-            <FaPencilAlt className="text-white text-2xl" />
+            <FaPencilAlt className="text-white text-xl" />
           </div>
-          <div className="bg-gray-200 px-5 py-8 rounded-md relative">
+          <div className="bg-gray-200 p-5 rounded-md relative">
             <h2 className="font-semibold my-2">FRONTEND DEVELOPER</h2>
             <p className="text-sm text-gray-500">TRIUMPH EDUCATION AND PUBLISING PVT LTD</p>
             <p className="text-sm text-gray-500">Aug 2022 - Present</p>
@@ -46,7 +46,7 @@ function Experiences() {
               ))}
             </ul>
 
-            <div className="absolute top-5 -left-4 -rotate-90 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[20px] border-b-gray-200"></div>
+            <div className="absolute top-4 -left-4 -rotate-90 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[20px] border-b-gray-200"></div>
           </div>
         </div>
       </motion.div>
