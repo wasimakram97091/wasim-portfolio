@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import AsideComponent from "@/components/common/asideComponents/AsideComponent";
-import SectionWrapper from "@/components/common/sectionWrapper/SectionWrapper";
+import AsideComponent from "../../common/asideComponents/AsideComponent";
+import SectionWrapper from "../../common/sectionWrapper/SectionWrapper";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FaDownload } from "react-icons/fa6";
 import { MdContactPhone } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/app/variants";
+import { fadeIn } from "../../../app/variants";
 
 function HomeBg() {
   const [showAside, setShowAside] = useState(false);
@@ -50,8 +50,7 @@ function HomeBg() {
             {toggleText ? (
               <div className="flex justify-center items-center flex-col">
                 <h2 className="font-bold text-4xl font-serif">
-                  Hi! <br />
-                  I'm Wasim
+                  Hi! <br />I am Wasim
                 </h2>
                 <button className="flex justify-center items-center gap-4 border border-black font-extralight py-2 text-sm px-10 mt-5">
                   DOWNLOAD CV <FaDownload />

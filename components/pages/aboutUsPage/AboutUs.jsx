@@ -1,11 +1,11 @@
 "use client";
-import PageHeading from "@/components/common/pageHeading/PageHeading";
-import SectionWrapper from "@/components/common/sectionWrapper/SectionWrapper";
+import SectionWrapper from "../../common/sectionWrapper/SectionWrapper";
 import Image from "next/image";
 import React from "react";
 import aboutDp from "../../../public/images/about-dp.png";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/app/variants";
+import { fadeIn } from "../../../app/variants";
+import PageHeading from "../../common/pageHeading/PageHeading";
 
 function AboutUs() {
   return (
@@ -18,7 +18,7 @@ function AboutUs() {
           </div>
           <div className="my-6">
             <p className="text-gray-500 text-sm font-light mb-5 leading-6 tracking-wider">
-              <span className="text-xl font-semibold">I'm Wasim</span> a Next and React.js developer with expertise in building scalable, high-performance web applications. My
+              <span className="text-xl font-semibold">I am Wasim</span> a Next and React.js developer with expertise in building scalable, high-performance web applications. My
               skills include creating dynamic user interfaces, optimizing web experiences with Next.js, and managing state using Redux and Context API. I also prioritize delivering
               responsive, visually appealing designs.
             </p>
