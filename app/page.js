@@ -1,9 +1,9 @@
 import HomePage from "@/components/pages/homePage";
-import Image from "next/image";
 import AboutUs from "./about/page";
 import ExpertiseMe from "./expertise/page";
 import SkillsPage from "@/components/pages/skillsPage";
 import EducationPage from "@/components/pages/educationPage";
+import ExperiencePage from "@/components/pages/experiencePage";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <ExpertiseMe />
       <SkillsPage />
       <EducationPage />
+      <ExperiencePage />
     </main>
   );
 }
