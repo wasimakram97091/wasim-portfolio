@@ -37,12 +37,15 @@ function Experiences() {
             </ul>
             <p className="text-sm my-2 text-gray-700 ">
               <span className="underline">Technologies Used :-</span> <br />
-              <ul className="grid grid-cols-2 mx-3 gap-2 list-disc mt-2">
-                {techArray?.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
             </p>
+            <ul className="grid grid-cols-2 mx-3 gap-2 list-disc mt-2">
+              {techArray?.map((item, index) => (
+                <li key={index} className="text-sm text-gray-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+
             <div className="absolute top-5 -left-4 -rotate-90 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[20px] border-b-gray-200"></div>
           </div>
         </div>
