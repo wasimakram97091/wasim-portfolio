@@ -10,14 +10,35 @@ import ContactPage from "@/components/pages/contactPage";
 export default function Home() {
   return (
     <main>
-      <HomePage />
-      <AboutUs />
-      <ExpertiseMe />
-      <SkillsPage />
-      <EducationPage />
-      <ExperiencePage />
-      <Works />
-      <ContactPage />
+      <section id="homes">
+        <HomePage />
+      </section>
+      <section id="abouts">
+        <AboutUs />
+      </section>
+
+      <section id="expertises">
+        <ExpertiseMe />
+      </section>
+
+      <section id="skillss">
+        <SkillsPage />
+      </section>
+      <section id="educations">
+        <EducationPage />
+      </section>
+
+      <section id="experiences">
+        <ExperiencePage />
+      </section>
+
+      <section id="works">
+        <Works />
+      </section>
+
+      <section id="contacts">
+        <ContactPage />
+      </section>
     </main>
   );
 }

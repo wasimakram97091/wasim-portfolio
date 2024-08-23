@@ -1,4 +1,4 @@
-const { default: Skill } = require("./Skill");
+import Skill from "./Skill";
 
 const SkillsPage = () => {
   return <Skill />;

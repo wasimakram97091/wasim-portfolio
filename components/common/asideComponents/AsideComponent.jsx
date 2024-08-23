@@ -3,18 +3,27 @@ import Image from "next/image";
 import React, { useState } from "react";
 import dp from "../../../public/images/dp.png";
 
-function AsideComponent() {
+function AsideComponent({ AsideHandle }) {
   const [activeItem, setActiveItem] = useState("HOME");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
-    console.log(`${item} is active`);
+    AsideHandle();
   };
 
-  const menuItems = ["HOME", "ABOUT", "EXPERTISE", "SKILLS", "EDUCATION", "EXPERIENCE", "WORK", "CONTACT"];
+  const menuItems = [
+    { label: "HOME", href: "#homes" },
+    { label: "ABOUT", href: "#abouts" },
+    { label: "EXPERTISE", href: "#expertises" },
+    { label: "SKILLS", href: "#skillss" },
+    { label: "EDUCATION", href: "#educations" },
+    { label: "EXPERIENCE", href: "#experiences" },
+    { label: "WORK", href: "#works" },
+    { label: "CONTACT", href: "#contacts" },
+  ];
 
   return (
-    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 ">
+    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 max-w-[90%] ">
       <div className="flex justify-between items-start">
         <Image src={dp} height={200} width={200} alt="Wasim Akram" />
       </div>
@@ -27,12 +36,10 @@ function AsideComponent() {
       <div className="my-4 text-xs">
         <ul className="font-light flex justify-center items-center flex-col">
           {menuItems.map((item) => (
-            <li
-              key={item}
-              className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item ? "text-cyanLight " : ""}`}
-              onClick={() => handleItemClick(item)}
-            >
-              {item}
+            <li className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item ? "text-cyanLight " : ""}`}>
+              <a key={item} href={item.href} onClick={() => handleItemClick(item)}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>

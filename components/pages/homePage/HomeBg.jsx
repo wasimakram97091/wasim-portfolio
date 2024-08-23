@@ -72,13 +72,13 @@ function HomeBg() {
             )}
           </motion.div>
           <div className="fixed z-50 bg-gray-100 top-6 left-4 p-1 rounded-md">
-            {!showAside ? <BiMenuAltLeft className="text-5xl" onClick={AsideHandler} /> : <GiCrossMark className="text-4xl" onClick={AsideHandler} />}
+            {!showAside ? <BiMenuAltLeft className="text-3xl" onClick={AsideHandler} /> : <GiCrossMark className="text-3xl" onClick={AsideHandler} />}
           </div>
 
           <div
             className={`fixed top-0 left-0 h-screen w-full overflow-y-scroll z-40 transition-transform duration-500 transform ${showAside ? "translate-x-0" : "-translate-x-full"}`}
           >
-            <AsideComponent />
+            <AsideComponent AsideHandle={AsideHandler} />
           </div>
         </div>
       </SectionWrapper>
