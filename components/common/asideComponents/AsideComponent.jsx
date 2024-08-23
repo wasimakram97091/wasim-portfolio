@@ -11,7 +11,7 @@ function AsideComponent() {
     console.log(`${item} is active`);
   };
 
-  const menuItems = ["HOME", "ABOUT", "SERVICES", "SKILLS", "EDUCATION", "EXPERIENCE", "WORK", "BLOG", "CONTACT"];
+  const menuItems = ["HOME", "ABOUT", "EXPERTISE", "SKILLS", "EDUCATION", "EXPERIENCE", "WORK", "CONTACT"];
 
   return (
     <div className="flex justify-center items-center flex-col bg-gray-200 p-12 ">

@@ -1,5 +1,11 @@
+import EducationPage from "@/components/pages/educationPage";
+
 const Education = () => {
-  return <></>;
+  return (
+    <>
+      <EducationPage />
+    </>
+  );
 };
 
 export default Education;

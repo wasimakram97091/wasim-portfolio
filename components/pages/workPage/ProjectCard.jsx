@@ -12,7 +12,7 @@ function ProjectCard({ imgSrc, projectName, featureArray, technoArray, liveLink,
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.7 }}
-      className="px-2 py-5 bg-white shadow-2xl rounded-lg mb-10"
+      className="px-2 pt-3 pb-4 bg-white shadow-2xl rounded-lg mb-10"
     >
       <div className="relative ">
         <Image src={imgSrc} width={300} height={300} alt="projects pic" className="w-full rounded-md" />

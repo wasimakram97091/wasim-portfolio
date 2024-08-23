@@ -5,6 +5,7 @@ import SkillsPage from "@/components/pages/skillsPage";
 import EducationPage from "@/components/pages/educationPage";
 import ExperiencePage from "@/components/pages/experiencePage";
 import Works from "@/components/pages/workPage";
+import ContactPage from "@/components/pages/contactPage";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <EducationPage />
       <ExperiencePage />
       <Works />
+      <ContactPage />
     </main>
   );
 }

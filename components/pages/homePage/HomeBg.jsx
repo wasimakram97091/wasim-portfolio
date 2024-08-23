@@ -53,9 +53,11 @@ function HomeBg() {
                 <h2 className="font-bold text-4xl font-serif">
                   Hi! <br />I am Wasim
                 </h2>
-                <button className="flex justify-center items-center gap-4 border border-black font-extralight py-2 text-sm px-10 mt-5">
-                  DOWNLOAD CV <FaDownload />
-                </button>
+                <a href="/document/WASIM_AKRAM_RESUME.pdf.pdf" download>
+                  <button className="flex justify-center items-center gap-4 border border-black font-extralight py-2 text-sm px-10 mt-5">
+                    DOWNLOAD CV <FaDownload />
+                  </button>
+                </a>
               </div>
             ) : (
               <div className="flex justify-center items-center flex-col">
@@ -73,7 +75,6 @@ function HomeBg() {
             {!showAside ? <BiMenuAltLeft className="text-5xl" onClick={AsideHandler} /> : <GiCrossMark className="text-4xl" onClick={AsideHandler} />}
           </div>
 
-          {/* Updated AsideComponent positioning and z-index */}
           <div
             className={`fixed top-0 left-0 h-screen w-full overflow-y-scroll z-40 transition-transform duration-500 transform ${showAside ? "translate-x-0" : "-translate-x-full"}`}
           >

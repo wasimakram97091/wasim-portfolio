@@ -12,7 +12,7 @@ import weatherImg from "../../../public/images/weather.png";
 function MyWorks() {
   return (
     <SectionWrapper>
-      <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className="px-4 my-10">
+      <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className="px-4 ">
         <PageHeading upperHeading="MY WORK" dawnHeading="PERSONAL PROJECTS" />
         <div className="my-5">
           <ProjectCard
