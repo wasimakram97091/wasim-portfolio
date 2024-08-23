@@ -36,8 +36,8 @@ function AsideComponent({ AsideHandle }) {
       <div className="my-4 text-xs">
         <ul className="font-light flex justify-center items-center flex-col">
           {menuItems.map((item) => (
-            <li className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item ? "text-cyanLight " : ""}`}>
-              <a key={item} href={item.href} onClick={() => handleItemClick(item)}>
+            <li key={item} className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item ? "text-cyanLight " : ""}`}>
+              <a href={item.href} onClick={() => handleItemClick(item)}>
                 {item.label}
               </a>
             </li>
