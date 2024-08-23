@@ -28,9 +28,9 @@ function Experiences() {
             <h2 className="font-semibold my-2">FRONTEND DEVELOPER</h2>
             <p className="text-sm text-gray-500">TRIUMPH EDUCATION AND PUBLISING PVT LTD</p>
             <p className="text-sm text-gray-500">Aug 2022 - Present</p>
-            <ul className="list-disc mt-4">
+            <ul className=" mt-4">
               {workArray?.map((item, index) => (
-                <li key={index} className="text-sm text-gray-500 list-disc my-1">
+                <li key={index} className="text-sm text-gray-500  mb-3">
                   {item}
                 </li>
               ))}
