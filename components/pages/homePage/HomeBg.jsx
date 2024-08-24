@@ -16,7 +16,7 @@ function HomeBg() {
   const AsideHandler = () => {
     setShowAside((prev) => {
       const newState = !prev;
-      document.body.style.overflow = newState ? "hidden" : "auto";
+      document.body.style.overflow = newState && window.innerWidth <= 576 ? "hidden" : "auto";
       return newState;
     });
   };
@@ -30,11 +30,21 @@ function HomeBg() {
   }, []);
 
   return (
-    <>
-      <SectionWrapper>
-        <div className="relative h-auto">
+    <SectionWrapper>
+      <div className="relative h-auto ">
+        {/* Aside Component */}
+        <div
+          className={`${
+            showAside ? "translate-x-0" : "-translate-x-full"
+          } fixed z-50 sm:hidden sm:translate-x-0 sm:static sm:w-[30%] h-screen sm:h-auto w-full  transition-transform duration-500 overflow-y-auto sm:overflow-hidden`}
+        >
+          <AsideComponent AsideHandle={AsideHandler} />
+        </div>
+
+        {/* Main Content */}
+        <div className="w-full sm:w-full h-screen relative overflow-y-auto">
           <div
-            className="h-screen w-full bg-cover bg-center"
+            className="h-full w-full bg-cover bg-center"
             style={{
               backgroundImage: "url('/images/homeBg.jpg')",
               filter: "blur(1px)",
@@ -50,39 +60,37 @@ function HomeBg() {
           >
             {toggleText ? (
               <div className="flex justify-center items-center flex-col">
-                <h2 className="font-bold text-4xl font-serif">
+                <h2 className="font-bold text-4xl sm:text-5xl font-serif">
                   Hi! <br />I am Wasim
                 </h2>
                 <a href="/document/WASIM_AKRAM_RESUME.pdf.pdf" download>
-                  <button className="flex justify-center items-center gap-4 border border-black font-extralight py-2 text-sm px-10 mt-5">
+                  <button className="flex justify-center items-center gap-4 border border-black font-extralight sm:font-normal py-2 text-sm px-10 mt-5">
                     DOWNLOAD CV <FaDownload />
                   </button>
                 </a>
               </div>
             ) : (
               <div className="flex justify-center items-center flex-col">
-                <h2 className="font-bold text-2xl font-serif">
+                <h2 className="font-bold text-2xl sm:text-3xl font-serif">
                   I am <br />
                   Frontend Developer
                 </h2>
-                <button className="flex justify-center items-center gap-4 border border-black font-extralight py-2 text-sm px-10 mt-5">
-                  CONTACT ME <MdContactPhone />
-                </button>
+                <a href="#contacts">
+                  <button className="flex justify-center items-center gap-4 border border-black font-extralight sm:font-normal py-2 text-sm px-10 mt-5">
+                    CONTACT ME <MdContactPhone />
+                  </button>
+                </a>
               </div>
             )}
           </motion.div>
-          <div className="fixed z-50 bg-gray-100 top-6 left-4 p-1 rounded-md">
+
+          {/* Toggle Button for Mobile */}
+          <div className="fixed z-50 bg-gray-100 top-6 left-4 p-1 rounded-md sm:hidden">
             {!showAside ? <BiMenuAltLeft className="text-3xl" onClick={AsideHandler} /> : <GiCrossMark className="text-3xl" onClick={AsideHandler} />}
           </div>
-
-          <div
-            className={`fixed top-0 left-0 h-screen w-full overflow-y-scroll z-40 transition-transform duration-500 transform ${showAside ? "translate-x-0" : "-translate-x-full"}`}
-          >
-            <AsideComponent AsideHandle={AsideHandler} />
-          </div>
         </div>
-      </SectionWrapper>
-    </>
+      </div>
+    </SectionWrapper>
   );
 }
 

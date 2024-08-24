@@ -21,7 +21,7 @@ function ProjectCard({ imgSrc, projectName, featureArray, technoArray, liveLink,
       <h2 className="uppercase my-2 text-lg ">{projectName}</h2>
       <ul>
         {featureArray?.map((item, index) => (
-          <li key={index} className="text-xs text-gray-600 my-2">
+          <li key={index} className="text-xs sm:text-sm text-gray-600 my-2">
             {item}
           </li>
         ))}

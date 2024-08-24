@@ -38,7 +38,7 @@ function Experiences() {
             <p className="text-sm my-2 text-gray-700 ">
               <span className="underline">Technologies Used :-</span> <br />
             </p>
-            <ul className="grid grid-cols-2 mx-3 gap-2 list-disc mt-2">
+            <ul className="grid grid-cols-2 sm:grid-cols-4 mx-3 gap-2 list-disc mt-2">
               {techArray?.map((item, index) => (
                 <li key={index} className="text-sm text-gray-700">
                   {item}

@@ -25,7 +25,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto bg-white shadow-lg rounded-lg mb-10">
+    <div className="w-full  mx-auto bg-white shadow-lg rounded-lg mb-10">
       <AccordionItem
         title="MASTER OF COMMERCE"
         content="I have completed my Master's (M.com) from VINOBA BHAVE UNIVERSITY in session 2020 - 2022 with 66%"

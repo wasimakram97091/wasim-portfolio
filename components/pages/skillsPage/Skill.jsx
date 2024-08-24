@@ -32,13 +32,13 @@ function Skill() {
       <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
         <div className="px-4 my-10">
           <PageHeading upperHeading={"MY SPECIALTY"} dawnHeading={"MY SKILLS"} />
-          <p className="text-gray-500 font-light text-sm leading-7">
+          <p className="text-gray-500 font-light text-sm sm:text-base leading-7">
             Skilled in Next.js and React.js, with expertise in building dynamic, scalable web applications. Proficient in modern JavaScript, component-based design, and performance
             optimization techniques.
           </p>
         </div>
 
-        <div className="p-4">
+        <div className="p-4 sm:grid sm:grid-cols-2 gap-6">
           {skills.map((skill) => (
             <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} color={skill.color} />
           ))}

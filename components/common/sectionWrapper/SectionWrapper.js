@@ -1,7 +1,7 @@
 const SectionWrapper = ({ id, className, children }) => {
   return (
     <>
-      <section id={id} className="max-w-[1520px] my-0 mx-auto">
+      <section id={id} className="max-w-[1100px] my-0 mx-auto">
         {children}
       </section>
     </>

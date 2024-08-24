@@ -14,7 +14,7 @@ function Expertise() {
     <SectionWrapper>
       <div className="px-4 my-8">
         <PageHeading upperHeading={"WHAT I DO?"} dawnHeading={"HERE ARE SOME OF MY EXPERTISE"} />
-        <div className="my-8">
+        <div className="my-8 sm:grid sm:grid-cols-2 gap-5">
           <ExpertiseCard
             divStyle={"border-nextIconB"}
             iconStyle={"text-nextIcon"}
@@ -59,7 +59,7 @@ function Expertise() {
           />
         </div>
         <div
-          className="h-[50vh] bg-cover bg-center relative flex justify-center items-center bg-fixed"
+          className="h-[50vh] sm:h-[40vh] bg-cover bg-center relative flex justify-center items-center bg-fixed"
           style={{
             backgroundImage: "url('/images/coffee.jpg')",
           }}

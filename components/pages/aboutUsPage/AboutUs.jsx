@@ -17,20 +17,22 @@ function AboutUs() {
             <Image src={aboutDp} height={300} width={300} alt="Wasim pic" />
           </div>
           <div className="my-6">
-            <p className="text-gray-500 text-sm font-light mb-5 leading-6 tracking-wider">
+            <p className="text-gray-500 text-sm sm:text-base font-light mb-5 leading-6 tracking-wider">
               <span className="text-xl font-semibold">I am Wasim</span> a Next and React.js developer with expertise in building scalable, high-performance web applications. My
               skills include creating dynamic user interfaces, optimizing web experiences with Next.js, and managing state using Redux and Context API. I also prioritize delivering
               responsive, visually appealing designs.
             </p>
-            <p className="text-gray-500 text-sm font-light leading-6 tracking-wider">
+            <p className="text-gray-500 text-sm sm:text-base font-light leading-6 tracking-wider">
               Passionate about staying updated with the latest technologies, I thrive in Agile environments where collaboration and innovation are key. My commitment to performance
               optimization and enhancing user experience drives me to consistently deliver quality code on time, contributing effectively to any project I work on.
             </p>
           </div>
           <div>
-            <div className="bg-deepYellow px-6 py-10 mb-10 z-10">
+            <div className="bg-deepYellow px-6 py-10 mb-10 sm:my-8 z-10">
               <p className="text-3xl font-serif leading-10">I am happy to know you that 50+ projects done sucessfully!</p>
-              <button className="py-1 px-3 border border-black mt-4">HIRE ME</button>
+              <a href="#contacts">
+                <button className="py-1 px-3 border border-black mt-4">HIRE ME</button>
+              </a>
             </div>
           </div>
         </div>

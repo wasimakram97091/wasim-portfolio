@@ -17,8 +17,8 @@ function Contacts() {
             <Icon className="text-2xl text-blue-600" />
           </div>
           <div>
-            <p className="text-gray-500 font-light">{texts}</p>
-            <p className="text-gray-500 font-light">{pincode}</p>
+            <p className="text-gray-500 font-light sm:font-normal">{texts}</p>
+            <p className="text-gray-500 font-light sm:font-normal">{pincode}</p>
           </div>
         </div>
       </>

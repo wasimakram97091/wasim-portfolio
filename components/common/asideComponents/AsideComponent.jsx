@@ -7,8 +7,14 @@ function AsideComponent({ AsideHandle }) {
   const [activeItem, setActiveItem] = useState("HOME");
 
   const handleItemClick = (item) => {
-    setActiveItem(item);
-    AsideHandle();
+    setActiveItem(item.label);
+    if (window.innerWidth <= 576) {
+      AsideHandle();
+    }
+    const element = document.querySelector(item.href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const menuItems = [
@@ -23,7 +29,7 @@ function AsideComponent({ AsideHandle }) {
   ];
 
   return (
-    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 max-w-[90%] ">
+    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 max-w-[90%] sm:max-w-full fixed sm:static  sm:h-auto sm:overflow-hidden overflow-y-auto">
       <div className="flex justify-between items-start">
         <Image src={dp} height={200} width={200} alt="Wasim Akram" />
       </div>
@@ -36,16 +42,17 @@ function AsideComponent({ AsideHandle }) {
       <div className="my-4 text-xs">
         <ul className="font-light flex justify-center items-center flex-col">
           {menuItems.map((item) => (
-            <li key={item} className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item ? "text-cyanLight " : ""}`}>
-              <a href={item.href} onClick={() => handleItemClick(item)}>
-                {item.label}
-              </a>
+            <li
+              key={item.label}
+              className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item.label ? "text-cyanLight " : ""}`}
+            >
+              <a onClick={() => handleItemClick(item)}>{item.label}</a>
             </li>
           ))}
         </ul>
       </div>
       <p className="font-light text-xs text-center">
-        © Copyright ©2024 All rights reserved <br /> <span className="text-cyanLight mt-1"> ❤️ Wasim</span>
+        © Copyright 2024 All rights reserved <br /> <span className="text-cyanLight mt-1"> ❤️ Wasim</span>
       </p>
     </div>
   );
