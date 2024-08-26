@@ -6,15 +6,18 @@ import dp from "../../../public/images/dp.png";
 function AsideComponent({ AsideHandle }) {
   const [activeItem, setActiveItem] = useState("HOME");
 
-  const handleItemClick = (item) => {
+  const handleItemClick = (item, event) => {
+    event.preventDefault(); // Prevent the default behavior of updating the URL with the hash
     setActiveItem(item.label);
     if (window.innerWidth <= 576) {
       AsideHandle();
     }
-    const element = document.querySelector(item.href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      const element = document.querySelector(item.href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   const menuItems = [
@@ -29,7 +32,7 @@ function AsideComponent({ AsideHandle }) {
   ];
 
   return (
-    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 max-w-[90%] sm:max-w-full fixed sm:static  sm:h-auto sm:overflow-hidden overflow-y-auto">
+    <div className="flex justify-center items-center flex-col bg-gray-200 p-12 max-w-[90%] sm:max-w-full fixed sm:static sm:h-auto sm:overflow-hidden overflow-y-auto">
       <div className="flex justify-between items-start">
         <Image src={dp} height={200} width={200} alt="Wasim Akram" />
       </div>
@@ -44,9 +47,11 @@ function AsideComponent({ AsideHandle }) {
           {menuItems.map((item) => (
             <li
               key={item.label}
-              className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item.label ? "text-cyanLight " : ""}`}
+              className={`my-2 py-0.5 cursor-pointer border border-transparent hover:border hover:border-b-cyan-500 ${activeItem === item.label ? "text-cyanLight" : ""}`}
             >
-              <a onClick={() => handleItemClick(item)}>{item.label}</a>
+              <a href={item.href} onClick={(e) => handleItemClick(item, e)}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
