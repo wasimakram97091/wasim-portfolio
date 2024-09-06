@@ -63,7 +63,7 @@ function HomeBg() {
                 <h2 className="font-bold text-4xl sm:text-5xl font-serif">
                   Hi! <br />I am Wasim
                 </h2>
-                <a href="/document/WASIM_AKRAM_RESUME.pdf.pdf" download>
+                <a href="/document/Resume_Wasim_Akram.pdf" download>
                   <button className="flex justify-center items-center gap-4 border border-black font-extralight sm:font-normal py-2 text-sm px-10 mt-5">
                     DOWNLOAD CV <FaDownload />
                   </button>
